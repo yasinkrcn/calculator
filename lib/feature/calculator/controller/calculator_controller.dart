@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
 
-/// A comprehensive calculator controller that handles all calculator operations
-/// and state management.
-///
-/// Tüm hesap makinesi işlemlerini ve durum yönetimini ele alan kapsamlı bir
-/// hesap makinesi kontrolcüsü.
 class CalculatorController extends ChangeNotifier {
   /// Current equation displayed on calculator
   /// Hesap makinesinde görüntülenen mevcut denklem
