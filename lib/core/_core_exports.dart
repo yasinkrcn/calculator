@@ -20,4 +20,4 @@ export 'package:calculator/core/constants/theme/theme_controller.dart';
 export 'package:calculator/core/extension/sizedbox_extension.dart';
 export 'package:calculator/feature/calculator/controller/calculator_controller.dart';
 export 'package:calculator/feature/calculator/data/model/calculator_item.dart';
-export 'package:calculator/feature/calculator/view/widgets/theme_selector_widget.dart';
+export 'package:calculator/feature/calculator/view/widgets/theme_toggle.dart';

@@ -1,69 +1,98 @@
 import 'package:calculator/core/_core_exports.dart';
+import 'package:calculator/feature/calculator/view/widgets/calculator_display.dart';
+
+class CalculatorKeyButton extends StatelessWidget {
+  final CalculatorButton button;
+  final VoidCallback onPressed;
+
+  const CalculatorKeyButton({
+    super.key,
+    required this.button,
+    required this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+
+    return Material(
+      color: isDarkMode ? button.darkModeColor : button.lightModeColor,
+      borderRadius: BorderRadius.circular(24),
+      child: InkWell(
+        onTap: onPressed,
+        borderRadius: BorderRadius.circular(24),
+        child: Center(
+          child: SvgPicture.asset(
+            button.icon,
+            color: isDarkMode
+                ? button.isOperator
+                    ? Colors.white
+                    : Colors.white
+                : button.isOperator
+                    ? Colors.white
+                    : Colors.black,
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 class CalculatorPage extends StatelessWidget {
   const CalculatorPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    bool isDark = sl<ThemeController>().isDarkTheme;
     return Scaffold(
-      body: Consumer<CalculatorController>(
-        builder: (context, controller, child) {
-          return Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
+      body: SafeArea(
+        child: Consumer<CalculatorController>(
+          builder: (context, calculator, _) {
+            return Column(
               children: [
-                SizedBox(
-                  height: ScreenSize().topMargin,
-                ),
-                ThemeSelectorWidget(isDark: isDark),
-                const Spacer(),
-                Text(
-                  controller.equation,
-                  style: AppTextStyles.equationText.getTextStyle,
-                ),
-                Text(
-                  controller.result,
-                  style: AppTextStyles.resultText.getTextStyle,
-                ),
-                const Spacer(),
-                GridView.builder(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: controller.calculatorItemList.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 4,
-                    crossAxisSpacing: 16.w,
-                    mainAxisSpacing: 16.w,
-                  ),
-                  itemBuilder: (context, index) {
-                    CalculatorItem item = controller.calculatorItemList[index];
-                    return InkWell(
-                      onTap: () => controller.calculate(item.value!),
-                      child: Container(
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            color: isDark ? item.darkColor : item.lightColor, borderRadius: BorderRadius.circular(24)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(12),
-                          child: SvgPicture.asset(
-                            item.asset,
-                            // ignore: deprecated_member_use
-                            color: isDark ? AppColors.white : AppColors.black,
-                          ),
-                        ),
-                      ),
-                    );
-                  },
-                ),
-                SizedBox(
-                  height: ScreenSize().bottomMargin,
-                )
+                const ThemeToggle(),
+                const SizedBox(height: 8),
+                _buildDisplay(context, calculator),
+                const SizedBox(height: 16),
+                _buildKeypad(calculator),
+                const SizedBox(height: 16),
               ],
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
+    );
+  }
+
+  Widget _buildDisplay(BuildContext context, CalculatorController calculator) {
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+        child: CalculatorDisplay(
+          equation: calculator.equation,
+          result: calculator.result,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildKeypad(CalculatorController calculator) {
+    return GridView.builder(
+      padding: const EdgeInsets.all(16.0).copyWith(top: 0),
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 4,
+        crossAxisSpacing: 12,
+        mainAxisSpacing: 12,
+      ),
+      itemCount: CalculatorButton.calculatorButtons.length,
+      itemBuilder: (context, index) {
+        final button = CalculatorButton.calculatorButtons[index];
+        return CalculatorKeyButton(
+          button: button,
+          onPressed: () => calculator.handleButtonPress(button.value),
+        );
+      },
     );
   }
 }
