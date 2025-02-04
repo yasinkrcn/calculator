@@ -10,10 +10,10 @@
     <img src="https://github.com/user-attachments/assets/dd8288f6-e132-4653-8b07-137849046b75" alt="Simulator Screenshot - iPhone 16 - 2025-02-04 at 08 56 19" width="300">
 </div>
 
-<!-- iPhone Ekran Videosu -->
-<video width="300" controls>
-    <source src="https://github.com/user-attachments/assets/54de7847-77c8-49f9-bc92-227cf0fe2599" type="video/mp4">
-</video>
+
+
+https://github.com/user-attachments/assets/22b9b84b-842e-49fa-85b2-50d54a88b7ba
+
 
 ---
 
