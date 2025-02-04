@@ -4,6 +4,7 @@
 
 ![Flutter Version](https://img.shields.io/badge/Flutter-%3E%3D3.27.2-blue.svg)
 ![Simulator Screenshot - iPhone 16 - 2025-02-04 at 08 56 14]()
+![Simulator Screenshot - iPhone 16 - 2025-02-04 at 08 56 14](https://github.com/user-attachments/assets/a9038784-add8-47e8-a0fe-3c02b2d0b374)
 
 
 <div align="center">
