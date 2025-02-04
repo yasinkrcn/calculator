@@ -1,42 +1,6 @@
 import 'package:calculator/core/_core_exports.dart';
 import 'package:calculator/feature/calculator/view/widgets/calculator_display.dart';
-
-class CalculatorKeyButton extends StatelessWidget {
-  final CalculatorButton button;
-  final VoidCallback onPressed;
-
-  const CalculatorKeyButton({
-    super.key,
-    required this.button,
-    required this.onPressed,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
-
-    return Material(
-      color: isDarkMode ? button.darkModeColor : button.lightModeColor,
-      borderRadius: BorderRadius.circular(24),
-      child: InkWell(
-        onTap: onPressed,
-        borderRadius: BorderRadius.circular(24),
-        child: Center(
-          child: SvgPicture.asset(
-            button.icon,
-            color: isDarkMode
-                ? button.isOperator
-                    ? Colors.white
-                    : Colors.white
-                : button.isOperator
-                    ? Colors.white
-                    : Colors.black,
-          ),
-        ),
-      ),
-    );
-  }
-}
+import 'package:calculator/feature/calculator/view/widgets/calculator_key_button.dart';
 
 class CalculatorPage extends StatelessWidget {
   const CalculatorPage({super.key});
@@ -45,7 +9,7 @@ class CalculatorPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Consumer<CalculatorController>(
+        child: Consumer<CalculatorViewModel>(
           builder: (context, calculator, _) {
             return Column(
               children: [
@@ -63,7 +27,7 @@ class CalculatorPage extends StatelessWidget {
     );
   }
 
-  Widget _buildDisplay(BuildContext context, CalculatorController calculator) {
+  Widget _buildDisplay(BuildContext context, CalculatorViewModel calculator) {
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -75,7 +39,7 @@ class CalculatorPage extends StatelessWidget {
     );
   }
 
-  Widget _buildKeypad(CalculatorController calculator) {
+  Widget _buildKeypad(CalculatorViewModel calculator) {
     return GridView.builder(
       padding: const EdgeInsets.all(16.0).copyWith(top: 0),
       shrinkWrap: true,
@@ -85,9 +49,9 @@ class CalculatorPage extends StatelessWidget {
         crossAxisSpacing: 12,
         mainAxisSpacing: 12,
       ),
-      itemCount: CalculatorButton.calculatorButtons.length,
+      itemCount: CalculatorModel.calculatorButtons.length,
       itemBuilder: (context, index) {
-        final button = CalculatorButton.calculatorButtons[index];
+        final button = CalculatorModel.calculatorButtons[index];
         return CalculatorKeyButton(
           button: button,
           onPressed: () => calculator.handleButtonPress(button.value),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
-class BaseController with ChangeNotifier {
+class BaseViewModel with ChangeNotifier {
   void refreshView() => notifyListeners();
 }

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 ///
 /// This immutable class defines all necessary properties for rendering and handling
 /// calculator buttons, including their appearance in both light and dark themes.
-class CalculatorButton {
+class CalculatorModel {
   /// The path to the SVG asset used as the button's icon
   final String icon;
 
@@ -25,7 +25,7 @@ class CalculatorButton {
   /// Operators receive special styling and handling
   final bool isOperator;
 
-  /// Creates a constant [CalculatorButton].
+  /// Creates a constant [CalculatorModel].
   ///
   /// All parameters except [isOperator] are required.
   /// Example:
@@ -38,7 +38,7 @@ class CalculatorButton {
   ///   isOperator: true,
   /// );
   /// ```
-  const CalculatorButton({
+  const CalculatorModel({
     required this.icon,
     required this.value,
     required this.darkModeColor,
@@ -46,16 +46,16 @@ class CalculatorButton {
     this.isOperator = false,
   });
 
-  /// Creates a copy of this [CalculatorButton] with the given fields replaced with
+  /// Creates a copy of this [CalculatorModel] with the given fields replaced with
   /// new values.
-  CalculatorButton copyWith({
+  CalculatorModel copyWith({
     String? icon,
     String? value,
     Color? darkModeColor,
     Color? lightModeColor,
     bool? isOperator,
   }) {
-    return CalculatorButton(
+    return CalculatorModel(
       icon: icon ?? this.icon,
       value: value ?? this.value,
       darkModeColor: darkModeColor ?? this.darkModeColor,
@@ -70,11 +70,11 @@ class CalculatorButton {
     return 'CalculatorButton(value: $value, isOperator: $isOperator)';
   }
 
-  /// Compares this button with another [CalculatorButton] for equality.
+  /// Compares this button with another [CalculatorModel] for equality.
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-    return other is CalculatorButton &&
+    return other is CalculatorModel &&
         other.icon == icon &&
         other.value == value &&
         other.darkModeColor == darkModeColor &&
@@ -94,27 +94,27 @@ class CalculatorButton {
     );
   }
 
-  static List<CalculatorButton> calculatorButtons = [
-    CalculatorButton(
+  static List<CalculatorModel> calculatorButtons = [
+    CalculatorModel(
       icon: AssetPaths().clear,
       value: 'C',
       darkModeColor: AppColors.darkGrey,
       lightModeColor: AppColors.lightGrey,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().percent,
       value: '%',
       darkModeColor: AppColors.darkGrey,
       lightModeColor: AppColors.lightGrey,
       isOperator: true,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().delete,
       value: 'Del',
       darkModeColor: AppColors.darkGrey,
       lightModeColor: AppColors.lightGrey,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().divide,
       value: '÷',
       darkModeColor: AppColors.purple,
@@ -122,25 +122,25 @@ class CalculatorButton {
       isOperator: true,
     ),
     // Numbers 7-9
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().seven,
       value: '7',
       darkModeColor: AppColors.lightBlack,
-      lightModeColor: AppColors.white,
+      lightModeColor: AppColors.lightGrey,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().eight,
       value: '8',
       darkModeColor: AppColors.lightBlack,
-      lightModeColor: AppColors.white,
+      lightModeColor: AppColors.lightGrey,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().nine,
       value: '9',
       darkModeColor: AppColors.lightBlack,
-      lightModeColor: AppColors.white,
+      lightModeColor: AppColors.lightGrey,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().multiply,
       value: '×',
       darkModeColor: AppColors.purple,
@@ -148,25 +148,25 @@ class CalculatorButton {
       isOperator: true,
     ),
     // Numbers 4-6
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().four,
       value: '4',
       darkModeColor: AppColors.lightBlack,
-      lightModeColor: AppColors.white,
+      lightModeColor: AppColors.lightGrey,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().five,
       value: '5',
       darkModeColor: AppColors.lightBlack,
-      lightModeColor: AppColors.white,
+      lightModeColor: AppColors.lightGrey,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().six,
       value: '6',
       darkModeColor: AppColors.lightBlack,
-      lightModeColor: AppColors.white,
+      lightModeColor: AppColors.lightGrey,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().minus,
       value: '-',
       darkModeColor: AppColors.purple,
@@ -174,25 +174,25 @@ class CalculatorButton {
       isOperator: true,
     ),
     // Numbers 1-3
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().one,
       value: '1',
       darkModeColor: AppColors.lightBlack,
-      lightModeColor: AppColors.white,
+      lightModeColor: AppColors.lightGrey,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().two,
       value: '2',
       darkModeColor: AppColors.lightBlack,
-      lightModeColor: AppColors.white,
+      lightModeColor: AppColors.lightGrey,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().three,
       value: '3',
       darkModeColor: AppColors.lightBlack,
-      lightModeColor: AppColors.white,
+      lightModeColor: AppColors.lightGrey,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().plus,
       value: '+',
       darkModeColor: AppColors.purple,
@@ -200,25 +200,25 @@ class CalculatorButton {
       isOperator: true,
     ),
     // Bottom row
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().dot,
       value: '.',
       darkModeColor: AppColors.lightBlack,
-      lightModeColor: AppColors.white,
+      lightModeColor: AppColors.lightGrey,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().zero,
       value: '0',
       darkModeColor: AppColors.lightBlack,
-      lightModeColor: AppColors.white,
+      lightModeColor: AppColors.lightGrey,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().delete,
       value: 'Del',
       darkModeColor: AppColors.lightBlack,
-      lightModeColor: AppColors.white,
+      lightModeColor: AppColors.lightGrey,
     ),
-    CalculatorButton(
+    CalculatorModel(
       icon: AssetPaths().equal,
       value: '=',
       darkModeColor: AppColors.green,

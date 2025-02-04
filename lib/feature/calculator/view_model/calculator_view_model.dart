@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:calculator/core/_core_exports.dart';
 import 'package:math_expressions/math_expressions.dart';
 
-class CalculatorController extends ChangeNotifier {
+class CalculatorViewModel extends BaseViewModel {
   /// Current equation displayed on calculator
   /// Hesap makinesinde görüntülenen mevcut denklem
   String _equation = '0';

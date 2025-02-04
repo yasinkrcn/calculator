@@ -1,10 +1,13 @@
-# Flutter Modern Calculator App 🧮
+# Flutter Calculator App 🧮
 
 [English](#english) | [Türkçe](#türkçe)
 
-![Flutter Version](https://img.shields.io/badge/Flutter-%3E%3D3.0.0-blue.svg)
-![Dart Version](https://img.shields.io/badge/Dart-%3E%3D3.0.0-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-purple.svg)
+![Flutter Version](https://img.shields.io/badge/Flutter-%3E%3D3.27.2-blue.svg)
+
+<div align="center">
+  <img src="https://via.placeholder.com/300x600?text=Resim+1" alt="Resim 1" width="300" style="margin-right: 10px;">
+  <img src="https://via.placeholder.com/300x600?text=Resim+2" alt="Resim 2" width="300">
+</div>
 
 ---
 
@@ -36,12 +39,12 @@ A modern, feature-rich calculator application built with Flutter, featuring a cl
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/flutter_calculator.git
+git clone https://github.com/yasinkrcn/calculator.git
 ```
 
 2. Navigate to project directory
 ```bash
-cd flutter_calculator
+cd calculator
 ```
 
 3. Get dependencies
@@ -79,27 +82,26 @@ lib/
 │   ├── theme/
 │   │   ├── app_colors.dart
 │   │   └── app_theme.dart
-│   └── constants/
-│       └── asset_paths.dart
+│   ├── constants/
+│   │   └── app_constants.dart
+│   └── extensions/
+│       └── string_extensions.dart
 ├── features/
 │   └── calculator/
-│       ├── domain/
-│       │   └── models/
-│       ├── presentation/
-│       │   ├── controllers/
-│       │   ├── pages/
-│       │   └── widgets/
-│       └── data/
+│       ├── models/                
+│       │   └── calculator_model.dart
+│       ├── services/            
+│       │   └── calculator_service.dart
+│       ├── view_models/          
+│       │   └── calculator_view_model.dart
+│       └── views/                
+│           ├── calculator_page.dart
+│           └── widgets/
+│               ├── calculator_display.dart
+│               └── calculator_key_button.dart
+│               └── theme_toggle.dart
 └── main.dart
 ```
-
-### 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-### 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -131,12 +133,12 @@ Flutter ile geliştirilmiş, modern tasarıma ve gelişmiş hesaplama özellikle
 
 1. Projeyi klonlayın
 ```bash
-git clone https://github.com/kullaniciadin/flutter_calculator.git
+git clone https://github.com/yasinkrcn/calculator.git
 ```
 
 2. Proje dizinine gidin
 ```bash
-cd flutter_calculator
+cd calculator
 ```
 
 3. Bağımlılıkları yükleyin
@@ -174,24 +176,27 @@ lib/
 │   ├── theme/
 │   │   ├── app_colors.dart
 │   │   └── app_theme.dart
-│   └── constants/
-│       └── asset_paths.dart
+│   ├── constants/
+│   │   └── app_constants.dart
+│   └── extensions/
+│       └── string_extensions.dart
+│   └── init/
+│       └── injection_container.dart
+│       └── providers.dart
+│       └── startup_manager.dart
 ├── features/
 │   └── calculator/
-│       ├── domain/
-│       │   └── models/
-│       ├── presentation/
-│       │   ├── controllers/
-│       │   ├── pages/
-│       │   └── widgets/
-│       └── data/
+│       ├── models/                
+│       │   └── calculator_model.dart
+│       ├── services/            
+│       │   └── calculator_service.dart
+│       ├── view_models/          
+│       │   └── calculator_view_model.dart
+│       └── views/                
+│           ├── calculator_page.dart
+│           └── widgets/
+│               ├── calculator_display.dart
+│               └── calculator_key_button.dart
+│               └── theme_toggle.dart
 └── main.dart
 ```
-
-### 🤝 Katkıda Bulunma
-
-Katkılarınızı bekliyoruz! Lütfen Pull Request göndermekten çekinmeyin.
-
-### 📄 Lisans
-
-Bu proje MIT Lisansı ile lisanslanmıştır - detaylar için [LICENSE](LICENSE) dosyasına bakın.

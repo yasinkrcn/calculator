@@ -100,9 +100,7 @@ class _CalculatorDisplayState extends State<CalculatorDisplay> {
 
           const SizedBox(height: 8),
 
-          Divider(
-            color: isDarkMode ? Colors.white.withOpacity(0.1) : Colors.black.withOpacity(0.1),
-          ),
+          Divider(color: isDarkMode ? Colors.white.withOpacity(0.1) : Colors.black.withOpacity(0.1)),
 
           const SizedBox(height: 8),
 

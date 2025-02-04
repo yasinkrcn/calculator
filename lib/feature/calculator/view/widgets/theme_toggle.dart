@@ -10,7 +10,7 @@ class ThemeToggle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<ThemeController>(
+    return Consumer<ThemeViewModel>(
       builder: (context, themeController, _) {
         return InkWell(
           borderRadius: BorderRadius.circular(16),
