@@ -4,9 +4,10 @@
 
 ![Flutter Version](https://img.shields.io/badge/Flutter-%3E%3D3.27.2-blue.svg)
 
+
 <div align="center">
-  <img src="https://via.placeholder.com/300x600?text=Resim+1" alt="Resim 1" width="300" style="margin-right: 10px;">
-  <img src="https://via.placeholder.com/300x600?text=Resim+2" alt="Resim 2" width="300">
+  <img src="https://via.placeholder.com/300x600?text=Resim+1](https://github.com/user-attachments/assets/f265ed0e-fbb2-47e6-a7d9-8c120efee3cd" alt="Resim 1" width="300" style="margin-right: 10px;">
+  <img src="https://via.placeholder.com/300x600?text=Resim+2](https://github.com/user-attachments/assets/9e14e78f-acad-4434-887e-601134683add" alt="Resim 2" width="300">
 </div>
 
 ---
