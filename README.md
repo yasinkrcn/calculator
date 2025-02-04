@@ -3,14 +3,12 @@
 [English](#english) | [Türkçe](#türkçe)
 
 ![Flutter Version](https://img.shields.io/badge/Flutter-%3E%3D3.27.2-blue.svg)
-![Simulator Screenshot - iPhone 16 - 2025-02-04 at 08 56 14]()
-![Simulator Screenshot - iPhone 16 - 2025-02-04 at 08 56 14](https://github.com/user-attachments/assets/a9038784-add8-47e8-a0fe-3c02b2d0b374)
-
 
 <div align="center">
-  <img src="[https://via.placeholder.com/300x600?text=Resim+1](https://github.com/user-attachments/assets/f265ed0e-fbb2-47e6-a7d9-8c120efee3cd](https://github.com/user-attachments/assets/2a39be71-7ba7-4ecf-b61f-4bb31174cd46)" alt="Resim 1" width="300" style="margin-right: 10px;">
-  <img src="https://via.placeholder.com/300x600?text=Resim+2](https://github.com/user-attachments/assets/9e14e78f-acad-4434-887e-601134683add" alt="Resim 2" width="300">
+  <img src="https://github.com/user-attachments/assets/a9038784-add8-47e8-a0fe-3c02b2d0b374" alt="Simulator Screenshot - iPhone 16 - 2025-02-04 at 08 56 14" width="300" style="margin-right: 10px;">
+  <img src="https://github.com/user-attachments/assets/dd8288f6-e132-4653-8b07-137849046b75" alt="Simulator Screenshot - iPhone 16 - 2025-02-04 at 08 56 19" width="300">
 </div>
+
 
 ---
 
