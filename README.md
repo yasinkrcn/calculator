@@ -5,18 +5,18 @@
 ![Flutter Version](https://img.shields.io/badge/Flutter-%3E%3D3.27.2-blue.svg)
 
 <div align="center">
-  <!-- Video Bölümü -->
-  <video width="640" controls style="margin-bottom: 20px;">
-    <source src="https://github.com/user-attachments/assets/e88cba1b-c305-4691-ae98-07c9afcf3815" type="video/mp4">
-    Tarayıcınız video etiketini desteklemiyor.
-  </video>
+  <!-- Video Thumbnail: Videonun küçük resmi üzerine tıklayınca video URL'sine yönlendirecek -->
+  <a href="https://github.com/user-attachments/assets/e88cba1b-c305-4691-ae98-07c9afcf3815" target="_blank">
+    <img src="https://github.com/user-attachments/assets/a9038784-add8-47e8-a0fe-3c02b2d0b374" alt="Videonun Küçük Resmi" width="300" style="margin-bottom: 20px;">
+  </a>
 
-  <!-- Ekran Görüntüleri Bölümü -->
+  <!-- Ekran Görüntüleri -->
   <div>
     <img src="https://github.com/user-attachments/assets/a9038784-add8-47e8-a0fe-3c02b2d0b374" alt="Simulator Screenshot - iPhone 16 - 2025-02-04 at 08 56 14" width="300" style="margin-right: 10px;">
     <img src="https://github.com/user-attachments/assets/dd8288f6-e132-4653-8b07-137849046b75" alt="Simulator Screenshot - iPhone 16 - 2025-02-04 at 08 56 19" width="300">
   </div>
 </div>
+
 
 
 ---
