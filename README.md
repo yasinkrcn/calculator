@@ -87,6 +87,10 @@ lib/
 │   │   └── app_constants.dart
 │   └── extensions/
 │       └── string_extensions.dart
+│   └── init/
+│       └── injection_container.dart
+│       └── providers.dart
+│       └── startup_manager.dart
 ├── features/
 │   └── calculator/
 │       ├── models/                
