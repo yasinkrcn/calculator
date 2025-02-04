@@ -4,16 +4,13 @@
 
 ![Flutter Version](https://img.shields.io/badge/Flutter-%3E%3D3.27.2-blue.svg)
 
-<!-- Ekran Görüntüleri ve Video Bölümü -->
-<div>
-    <img src="https://github.com/user-attachments/assets/a9038784-add8-47e8-a0fe-3c02b2d0b374" alt="Simulator Screenshot - iPhone 16 - 2025-02-04 at 08 56 14" width="300">
-    <img src="https://github.com/user-attachments/assets/dd8288f6-e132-4653-8b07-137849046b75" alt="Simulator Screenshot - iPhone 16 - 2025-02-04 at 08 56 19" width="300">
-</div>
+## 📸 Screenshots
 
+| Screenshot 1 | Screenshot 2 |
+|-------------|-------------|
+| <img src='https://github.com/user-attachments/assets/a9038784-add8-47e8-a0fe-3c02b2d0b374' width="300" /> | <img src='https://github.com/user-attachments/assets/dd8288f6-e132-4653-8b07-137849046b75' width="300" /> |
 
-
-https://github.com/user-attachments/assets/22b9b84b-842e-49fa-85b2-50d54a88b7ba
-
+[🎥 Video Demo](https://github.com/user-attachments/assets/22b9b84b-842e-49fa-85b2-50d54a88b7ba)
 
 ---
 
@@ -210,3 +207,4 @@ lib/
 │               └── theme_toggle.dart
 └── main.dart
 ```
+
