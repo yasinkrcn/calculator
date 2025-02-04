@@ -4,11 +4,16 @@
 
 ![Flutter Version](https://img.shields.io/badge/Flutter-%3E%3D3.27.2-blue.svg)
 
-  <!-- Ekran Görüntüleri Bölümü -->
-  <div>
-    <img src="https://github.com/user-attachments/assets/a9038784-add8-47e8-a0fe-3c02b2d0b374" alt="Simulator Screenshot - iPhone 16 - 2025-02-04 at 08 56 14" width="300" style="margin-right: 10px;">
+<!-- Ekran Görüntüleri ve Video Bölümü -->
+<div>
+    <img src="https://github.com/user-attachments/assets/a9038784-add8-47e8-a0fe-3c02b2d0b374" alt="Simulator Screenshot - iPhone 16 - 2025-02-04 at 08 56 14" width="300">
     <img src="https://github.com/user-attachments/assets/dd8288f6-e132-4653-8b07-137849046b75" alt="Simulator Screenshot - iPhone 16 - 2025-02-04 at 08 56 19" width="300">
-  </div>
+</div>
+
+<!-- iPhone Ekran Videosu -->
+<video width="300" controls>
+    <source src="https://github.com/user-attachments/assets/54de7847-77c8-49f9-bc92-227cf0fe2599" type="video/mp4">
+</video>
 
 ---
 
